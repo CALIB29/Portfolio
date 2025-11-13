@@ -97,9 +97,33 @@ function initThreeJS() {
     animate();
 }
 
+// Typewriter effect
+function initTypewriter() {
+    const typewriterElement = document.querySelector('.typewriter');
+    if (!typewriterElement) return;
+    
+    const text = typewriterElement.textContent;
+    typewriterElement.textContent = '';
+    
+    let i = 0;
+    const speed = 50; // Speed in milliseconds
+    
+    function typeWriter() {
+        if (i < text.length) {
+            typewriterElement.textContent += text.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+        }
+    }
+    
+    // Start the animation
+    setTimeout(typeWriter, 1000); // Delay start by 1 second
+}
+
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     initThreeJS();
+    initTypewriter();
     
     // Add animation to elements
     gsap.from('.hero-content h1, .hero-content h2, .hero-content p, .cta-buttons', {
