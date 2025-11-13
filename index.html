@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | AI-Powered Web & Interactive Design Developer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.11.4/dist/gsap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation -->
+        <nav>
+            <div class="logo">Portfolio</div>
+            <div class="nav-links">
+                <a href="#home" class="active">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main>
+            <section id="home" class="hero">
+                <div class="hero-content">
+                    <h1>Hi, I'm <span class="highlight">Raph Justine Butial</span></h1>
+                    <h2>AI-Powered Web & Interactive Design Developer</h2>
+                    <p>I create smart, adaptive websites powered by AI.</p>
+                    <div class="cta-buttons">
+                        <a href="#projects" class="btn primary">View My Work</a>
+                        <a href="#contact" class="btn secondary">Contact Me</a>
+                    </div>
+                </div>
+                <div class="hero-3d" id="hero-3d">
+                    <!-- 3D model will be rendered here -->
+                </div>
+            </section>
+
+            <section id="about" class="about">
+                <h2>About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Hello! I'm an undergraduate student at Sta. Rita College, currently pursuing a Bachelor of Science in Information Systems. My academic journey has equipped me with a strong foundation in technology and its applications in solving real-world problems.</p>
+                    <p>As an aspiring IT professional, I'm passionate about exploring the ever-evolving tech landscape. I'm eager to expand my knowledge and skills in web development, software engineering, and emerging technologies to make meaningful contributions to the digital world.</p>
+                        <div class="skills">
+                            <span class="skill-tag">HTML5/CSS3</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">PHP</span>
+                            <span class="skill-tag">MySQL</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects" class="projects">
+                <h2>My Projects</h2>
+                <div class="project-grid">
+                    <!-- Project 1: PowerPoint Demo -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="images/GCP.png" alt="PowerPoint Demo">
+                            <div class="project-overlay">
+                                <h3>Google Cloud Platform Presentation</h3>
+                                <p>Interactive presentation showcasing data visualization and animations</p>
+                                <div class="project-links">
+                                    <a href="https://tinyurl.com/GCPIS4" class="btn primary" target="_blank">View Demo</a>
+                                    <a href="https://tinyurl.com/GCP-IS4A" class="btn primary" target="_blank">View PPT</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Google Cloud Platform</h3>
+                            <div class="project-tags">
+                                <span>PowerPoint</span>
+                                <span>Data Visualization</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: Web Project 1 -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="images/FeatherTech.png" alt="Web Project 1">
+                            <div class="project-overlay">
+                                <h3>FeatherTech</h3>
+                                <p>Poultry management system with real-time monitoring, QR code tracking, and vaccination scheduling.</p>
+                                <div class="project-links">
+                                    <a href="https://afeathertech.com" class="btn primary" target="_blank">View Page</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>FeatherTech: A Hybrid App Poultry Management System</h3>
+                            <div class="project-tags">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                                <span>PHP</span>
+                                <span>MySQL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="contact">
+                <h2>Get In Touch</h2>
+                <form id="contact-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn primary">Send Message</button>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p>&copy; 2025 Raph Justine Butial. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script/main.js"></script>
+</body>
+</html>
