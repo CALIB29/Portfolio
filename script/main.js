@@ -120,10 +120,57 @@ function initTypewriter() {
     setTimeout(typeWriter, 1000); // Delay start by 1 second
 }
 
+// Certificate Modal Functionality
+function initCertificateModal() {
+    const modal = document.getElementById('certificate-modal');
+    const modalImg = document.getElementById('certificate-image');
+    const captionText = document.getElementById('certificate-caption');
+    const closeBtn = document.querySelector('.close-modal');
+    
+    // Get all certificate view buttons
+    const viewButtons = document.querySelectorAll('.view-certificate');
+    
+    // Add click event to each view button
+    viewButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const imgSrc = this.getAttribute('data-image');
+            const certificateTitle = this.closest('.certificate-card').querySelector('h3').textContent;
+            
+            modal.style.display = 'block';
+            modalImg.src = imgSrc;
+            captionText.textContent = certificateTitle;
+            document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+        });
+    });
+    
+    // Close modal when clicking the close button
+    closeBtn.addEventListener('click', function() {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto'; // Re-enable scrolling
+    });
+    
+    // Close modal when clicking outside the image
+    window.addEventListener('click', function(event) {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Re-enable scrolling
+        }
+    });
+    
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape' && modal.style.display === 'block') {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Re-enable scrolling
+        }
+    });
+}
+
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     initThreeJS();
     initTypewriter();
+    initCertificateModal();
     
     // Add animation to elements
     gsap.from('.hero-content h1, .hero-content h2, .hero-content p, .cta-buttons', {
